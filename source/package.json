@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "dotenv": "^4.0.0",
+    "inversify": "^4.2.0",
+    "jshint": "^2.9.4",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-qs": "^2.0.0",
+    "koa-router": "7.1.1",
+    "mysql": "2.13.0",
+    "mysql2": "1.2.0",
+    "object-hash": "^1.1.8",
+    "ramda": "^0.24.1",
+    "reflect-metadata": "^0.1.10",
+    "sequelize": "3.30.4",
+    "sequelize-cli": "2.7.0",
+    "winston": "^2.3.1"
+  }
+}
