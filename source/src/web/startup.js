@@ -8,7 +8,7 @@ const main = async () => {
     const serverPort = 3000;
     const router = new Router();
     const dependencyResolver = require('web/compositionRoot');
-    const resolver = require("modules/resolver")(dependencyResolver);
+    const resolver = require("web/resolver")(dependencyResolver);
     const routing = require("web/route");
     const bodyparser = require("koa-bodyparser");
     const qs = require("koa-qs");

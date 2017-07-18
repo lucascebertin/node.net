@@ -2,7 +2,7 @@ const R = require('ramda');
 
 const resolverFactory = (container) => {
     const resolver = (function(_container){
-        return function(resolutions, callback) {
+        return async function(resolutions, callback) {
             const resolution = []; 
 
             resolutions.forEach(function(dependency) {
@@ -10,7 +10,7 @@ const resolverFactory = (container) => {
                 resolution.push(resolvedDependency);
             }, this);
 
-            callback.apply(this, resolution);
+            await callback.apply(this, resolution);
         };
     })(container);
 
@@ -21,7 +21,7 @@ const resolverFactory = (container) => {
                     const curriedController = R.curry(controller.callback);
                     const final = curriedController(ctx, next);
     
-                    resolver(
+                    await resolver(
                         controller.dependencies, 
                         final
                     );
